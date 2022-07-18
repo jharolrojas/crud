@@ -1,11 +1,6 @@
-import React, { useState } from "react";
 import DataTable from "react-data-table-component";
-import useGetData from "../customHooks/useGetData";
 
-const ListUser = ({ updateUser }) => {
-  const { datos, deleteUser } = useGetData();
-  const [dataUser, setDataUser] = useState(datos);
-
+const ListUser = ({ data, updateUser, deleteUser }) => {
   const columnas = [
     {
       name: "Name",
@@ -35,12 +30,13 @@ const ListUser = ({ updateUser }) => {
           onClick={() => updateUser(d)}
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
-          class="btn btn-info"
+          className="btn btn-info"
         >
-          <i class="fas fa-user-edit"></i>
+          <i className="fas fa-user-edit"></i>
         </button>
       ),
       sortable: true,
+      grow: 0,
     },
     {
       name: "Delete",
@@ -48,31 +44,32 @@ const ListUser = ({ updateUser }) => {
         <button
           type="button"
           onClick={() => deleteUser(d.id)}
-          class="btn btn-danger"
+          className="btn btn-danger"
         >
-          <i class="fas fa-trash-alt"></i>
+          <i className="fas fa-trash-alt"></i>
         </button>
       ),
       sortable: true,
+      grow: 0,
     },
   ];
   return (
-    <div className="x col-6">
+    <div className="containerList ">
       <DataTable
         columns={columnas}
-        data={datos}
+        data={data}
         title={
           <div className="titleAndButton">
-            <h2 className="createUser">
+            <h2 className="createUser title">
               List<span>User</span>{" "}
             </h2>
             <button
               type="button"
-              class="btn  newUser"
+              className="btn  newUser"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              <i class="fas fa-user-plus"></i>
+              <i className="fas fa-user-plus"></i>
             </button>
           </div>
         }

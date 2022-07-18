@@ -1,80 +1,77 @@
-*{
+* {
   box-sizing: border-box;
 }
 body {
-	background-image: url('./assets/xxl.png');
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-  
+  background-image: url("./assets/xxl.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 .App {
-  font-family: 'Open Sans', sans-serif;
-  width: 100vw;
-  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  
+  flex-direction: column;
 }
-.formUser{
-  width: 90%; 
+.formUser {
+  width: 90%;
 }
 .modal-body {
   padding: 0;
   display: flex;
   justify-content: center;
- 
 }
-.titleAndButton{
+.titleAndButton {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.newUser{
-background-color: #81DF03 ; 
-display: flex;
-justify-content: center;
-align-items: center;
-
+.newUser {
+  background-color: #81df03;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-input{
+input {
   border: 1px rgba(216, 203, 203, 0.882) solid;
-  outline: none; 
+  outline: none;
   height: 35px;
   border-radius: 5px;
- 
 }
-label{
+label {
   margin-left: 10px;
   font-weight: bold;
   margin: 5px;
 }
-.inputCompleteName{
+.inputCompleteName {
   width: 100%;
 }
 
-h2{
-  font-weight:300 ;
-  color: #2CA5E7;
+.title {
+  font-weight: 300;
+  color: #2ca5e7;
   text-align: center;
 }
-h2 span{
-  color:#81DF03 ;
+.title span {
+  color: #81df03;
   font-weight: bold;
 }
-.buttom{
+.fontSize {
+  font-size: 1.5rem;
+}
+.buttom {
   text-align: center;
 }
-.x{
-  
+.containerList {
   width: 90%;
   max-width: 800px;
   margin: 10px;
-  box-shadow: 0px 0px 10px grey , -0px -0px 10px grey;
-  
+  box-shadow: 0px 0px 10px grey, -0px -0px 10px grey;
 }
-.containerDescritionUser{
+.containerDescritionUser {
   display: flex;
 }
