@@ -12,7 +12,16 @@ const FormUser = ({
   setDate,
   email,
   setEmail,
+  success,
+  setSuccess
 }) => {
+
+ const  successValidations = () =>{
+  setSuccess(true);
+  setTimeout(function () {
+    setSuccess(false)
+  } , 3000)
+ }
   return (
     <div
       className="modal fade"
@@ -46,7 +55,9 @@ const FormUser = ({
           </div>
           <div className="modal-body">
             <form className="formUser" onSubmit={createUserObjec}>
+          
               <div className="completeName  d-flex justify-content-evenly">
+                
                 <div className="p-1">
                   <label htmlFor="name">Name</label>
                   <input
@@ -99,9 +110,12 @@ const FormUser = ({
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
+              { success && <span className="success">Success</span>}
               <div className="modal-footer">
-                <button className="btn btn-primary m-1">
+             
+                <button className="btn btn-primary m-1" onClick={successValidations}>
                   {userSelect !== null ? "Update" : "Create"}
+                  
                 </button>
                 <button onClick={reset} className="btn btn-danger m-1">
                   Reset

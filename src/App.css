@@ -75,3 +75,11 @@ label {
 .containerDescritionUser {
   display: flex;
 }
+.success{
+  color: #81df03;
+  text-align: center;
+  width: 100%;
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+}

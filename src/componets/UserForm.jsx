@@ -7,6 +7,7 @@ const UserForm = ({ userSelect, setUserSelect, createUser, updateUser }) => {
   const [password, setPassword] = useState("");
   const [date, setDate] = useState("");
   const [email, setEmail] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const createUserObjec = (e) => {
     e.preventDefault();
@@ -61,6 +62,8 @@ const UserForm = ({ userSelect, setUserSelect, createUser, updateUser }) => {
         setDate={setDate}
         email={email}
         setEmail={setEmail}
+        success={success}
+        setSuccess={setSuccess}
       />
     </>
   );
