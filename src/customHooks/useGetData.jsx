@@ -6,30 +6,30 @@ const useGetData = () => {
 
   useEffect(() => {
     axios
-      .get("https://users-crud1.herokuapp.com/users/")
+      .get("https://users-crud.academlo.tech/users/")
       .then((res) => setData(res.data));
   }, []);
   const getData = () => {
     axios
-      .get("https://users-crud1.herokuapp.com/users/")
+      .get("https://users-crud.academlo.tech/users/")
       .then((res) => setData(res.data));
   };
 
   const createUser = (user) => {
     axios
-      .post("https://users-crud1.herokuapp.com/users/", user)
+      .post("https://users-crud.academlo.tech/users/", user)
       .then(() => getData())
       .catch((err) => console.log(err));
   };
   const deleteUser = (id) => {
     axios
-      .delete(`https://users-crud1.herokuapp.com/users/${id}/`)
+      .delete(`https://users-crud.academlo.tech/users/${id}/`)
       .then(() => getData())
       .catch((err) => console.log(err));
   };
   const updateUser = (id, user) => {
     axios
-      .put(`https://users-crud1.herokuapp.com/users/${id}/`, user)
+      .put(`https://users-crud.academlo.tech/users/${id}/`, user)
       .then(() => getData())
       .catch((err) => console.log(err));
   };
